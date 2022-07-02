@@ -12,9 +12,7 @@ export interface SpaConfigSettings {
   socialIcons?: Icon[];
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SpaConfigService {
   showUserControls = true;
   socialIcons = new Array<Icon>()
