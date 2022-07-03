@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SpaBodyComponent } from './spa-body/spa-body.component';
-import { SpaHeaderComponent } from './spa-body/spa-header/spa-header.component';
-import { SpaContentComponent } from './spa-body/spa-content/spa-content.component';
-import { SpaFooterComponent } from './spa-body/spa-footer/spa-footer.component';
+import { SpaBodyComponent } from './components/spa-body/spa-body.component';
+import { SpaHeaderComponent } from './components/spa-header/spa-header.component';
+import { SpaContentComponent } from './components/spa-content/spa-content.component';
+import { SpaFooterComponent } from './components/spa-footer/spa-footer.component';
 import { SpaConfigService } from './services/spa-config.service';
-import { IconBarComponent } from './icon-bar/icon-bar.component';
+import { IconBarComponent } from './components/icon-bar/icon-bar.component';
 import { ScreenService } from './services/screen.service';
 import { ScreenLargeDirective } from './directives/screen-large.directive';
 import { ScreenSmallDirective } from './directives/screen-small.directive';
+import { MenuService } from './services/menu.service';
 @NgModule({
   imports: [ CommonModule ],
   declarations: [
@@ -21,6 +22,6 @@ import { ScreenSmallDirective } from './directives/screen-small.directive';
     ScreenSmallDirective
   ],
   exports: [ SpaBodyComponent ],
-  providers: [ SpaConfigService, ScreenService ]
+  providers: [ SpaConfigService, ScreenService, MenuService ]
 })
 export class SpaModule { }
