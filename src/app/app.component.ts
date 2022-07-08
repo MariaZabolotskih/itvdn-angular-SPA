@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/spa/services/menu.service';
+import { AppMenuItems } from './app-menu';
 import { SpaConfigService, SpaConfigSettings } from 'src/spa/services/spa-config.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { SpaConfigService, SpaConfigSettings } from 'src/spa/services/spa-config
 })
 export class AppComponent implements OnInit {
   
-  constructor(private spaConfigService: SpaConfigService) {}
+  constructor(private spaConfigService: SpaConfigService, private menuService: MenuService) {}
 
   ngOnInit(): void {
     const config: SpaConfigSettings = {
@@ -19,6 +21,7 @@ export class AppComponent implements OnInit {
       showUserControls: true
     };
     this.spaConfigService.configure(config);
+    this.menuService.items = AppMenuItems;
   }
 
 }

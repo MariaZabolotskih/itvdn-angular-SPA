@@ -1,4 +1,4 @@
-import {MenuItem} from '../spa/services/menu.service'
+import { MenuItem } from '../spa/services/menu.service'
 
 export const AppMenuItems: MenuItem[] = [
     {

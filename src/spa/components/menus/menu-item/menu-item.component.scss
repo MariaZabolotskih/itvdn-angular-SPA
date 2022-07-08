@@ -1,0 +1,41 @@
+:host {
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 6px;
+    color: #eee;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:not(.parent-for-popup) {
+        margin-left: 16px;
+        width: auto;
+    }
+}
+
+.menu-item {
+    padding: 10px 6px 10px 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: #148189d7;
+        border-radius: 0.2rem;
+    }
+}
+
+.icon {
+    top: -2px;
+    position: relative;
+    margin-right: 4px;
+
+    img {
+        width: 22px;
+        height: 22px;
+    }
+}

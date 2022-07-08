@@ -10,6 +10,8 @@ import { ScreenService } from './services/screen.service';
 import { ScreenLargeDirective } from './directives/screen-large.directive';
 import { ScreenSmallDirective } from './directives/screen-small.directive';
 import { MenuService } from './services/menu.service';
+import { MenuComponent } from './components/menus/menu/menu.component';
+import { MenuItemComponent } from './components/menus/menu-item/menu-item.component';
 @NgModule({
   imports: [ CommonModule ],
   declarations: [
@@ -19,7 +21,9 @@ import { MenuService } from './services/menu.service';
     SpaFooterComponent,
     IconBarComponent,
     ScreenLargeDirective,
-    ScreenSmallDirective
+    ScreenSmallDirective,
+    MenuComponent,
+    MenuItemComponent
   ],
   exports: [ SpaBodyComponent ],
   providers: [ SpaConfigService, ScreenService, MenuService ]
