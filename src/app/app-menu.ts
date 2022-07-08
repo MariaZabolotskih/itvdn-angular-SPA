@@ -2,9 +2,9 @@ import { MenuItem } from '../spa/services/menu.service'
 
 export const AppMenuItems: MenuItem[] = [
     {
-        text: 'Groups',
-        icon: 'assets/imgs/guitar.png',
-        route: '/groups',
+        text: 'Home',
+        icon: 'assets/imgs/home.png',
+        route: '/home',
         submenu: [],
     },
     {
@@ -14,10 +14,9 @@ export const AppMenuItems: MenuItem[] = [
         submenu: [],
     },
     {
-        text: 'Home',
-        icon: 'assets/imgs/home.png',
-        route: '/home',
+        text: 'Groups',
+        icon: 'assets/imgs/guitar.png',
+        route: '/groups',
         submenu: [],
     },
-
 ]

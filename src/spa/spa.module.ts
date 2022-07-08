@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { SpaBodyComponent } from './components/spa-body/spa-body.component';
 import { SpaHeaderComponent } from './components/spa-header/spa-header.component';
@@ -13,7 +14,7 @@ import { MenuService } from './services/menu.service';
 import { MenuComponent } from './components/menus/menu/menu.component';
 import { MenuItemComponent } from './components/menus/menu-item/menu-item.component';
 @NgModule({
-  imports: [ CommonModule ],
+  imports: [ CommonModule, RouterModule ],
   declarations: [
     SpaBodyComponent,
     SpaHeaderComponent,
