@@ -1,12 +1,30 @@
-<div 
+<div
     class="menu-item"
-    [ngClass]="{'vertical-menu': menuService.isVertical}"
+    [ngClass]="{ 'vertical-menu': menuService.isVertical }"
     [routerLink]="item.route"
     routerLinkActive="active"
-    (click)="menuService.showVerticalMenu = false"
 >
-    <span class="icon"> 
-        <img [src]="item.icon">
+    <span class="icon">
+        <img [src]="item.icon" />
     </span>
     <span> {{ item.text }}</span>
+    <span *ngIf="item.submenu.length !== 0  && !menuService.isVertical" >
+        <span [ngClass]="parentIsPopup ? 'dropright' : 'dropdown'">
+            <button class="dropdown-toggle"></button>
+        </span>
+    </span>
+    <span *ngIf="item.submenu.length !== 0  && menuService.isVertical" >
+        <span [ngClass]="(mouseInPopup || mouseInItem) ? 'dropleft' : 'dropdown'">
+            <button class="dropdown-toggle"></button>
+        </span>
+    </span>
 </div>
+<spa-popup-menu
+    *ngIf="mouseInPopup || mouseInItem"
+    [menu]="item.submenu"
+    [ngClass]="{ 'vertical-menu': menuService.isVertical }"
+    [style.right]="popupLeft + 'px'"
+    [style.top]="popupTop + 'px'"
+    (mouseleave)="onPopupMouseLeave($event)"
+    (mouseenter)="onPopupMouseEnter($event)"
+></spa-popup-menu>

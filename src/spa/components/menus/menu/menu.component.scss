@@ -26,3 +26,16 @@ ul {
 li {
     display: inline;
 }
+
+div {
+    margin-top: 20px;
+
+    button {
+        background-color: #eee;
+
+        &.horizontal {
+            margin-left: 20px;
+            margin-bottom: 7px;
+        }
+    }
+}

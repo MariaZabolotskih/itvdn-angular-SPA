@@ -13,6 +13,7 @@ import { ScreenSmallDirective } from './directives/screen-small.directive';
 import { MenuService } from './services/menu.service';
 import { MenuComponent } from './components/menus/menu/menu.component';
 import { MenuItemComponent } from './components/menus/menu-item/menu-item.component';
+import { PopupMenuComponent } from './components/menus/popup-menu/popup-menu.component';
 @NgModule({
   imports: [ CommonModule, RouterModule ],
   declarations: [
@@ -24,7 +25,8 @@ import { MenuItemComponent } from './components/menus/menu-item/menu-item.compon
     ScreenLargeDirective,
     ScreenSmallDirective,
     MenuComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    PopupMenuComponent
   ],
   exports: [ SpaBodyComponent ],
   providers: [ SpaConfigService, ScreenService, MenuService ]
