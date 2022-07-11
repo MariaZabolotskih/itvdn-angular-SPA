@@ -18,4 +18,8 @@ export class MenuService {
     this.isVertical = true;
     this.showVerticalMenu = !this.showVerticalMenu;
   }
+
+  toggleOrientation(): void {
+    this.isVertical = !this.isVertical;
+  }
 }
