@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GroupsComponent } from './groups/groups.component';
+import { GroupDetailComponent } from './group-detail/group-detail.component';
+import { GroupsListComponent } from './groups-list/groups-list.component';
+import { GroupMaintenanceComponent } from './groups-maintenance/groups-maintenance.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'groups', component: GroupsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'groups-list/:count', component: GroupsListComponent },
+  { path: 'group-detail/:group', component: GroupDetailComponent },
+  { path: 'groups-maintenance', component: GroupMaintenanceComponent },
   { path: '**', component: HomeComponent },
 ];
 
