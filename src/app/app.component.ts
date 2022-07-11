@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     const config: SpaConfigSettings = {
       socialIcons: [
         { imageFile: 'assets/imgs/vk.png', alt: 'ВКонтакте', url: 'https://vk.com' },
-        { imageFile: 'assets/imgs/whatsapp.png', alt: 'ВКонтакте', url: 'https://whatsapp.com' },
+        { imageFile: 'assets/imgs/whatsapp.png', alt: 'WhatsApp', url: 'https://whatsapp.com' },
       ],
       showUserControls: true
     };
