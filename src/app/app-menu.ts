@@ -4,7 +4,7 @@ export const AppMenuItems: MenuItem[] = [
     {
         text: 'Home',
         icon: 'assets/imgs/home.png',
-        route: '/home',
+        route: '/authenticated/home',
         submenu: [],
     },
     {
@@ -15,13 +15,13 @@ export const AppMenuItems: MenuItem[] = [
             {
                 text: 'Groups maint',
                 icon: 'assets/imgs/settings.png',
-                route: '/groups-maintenance',
+                route: '/authenticated/groups-maintenance',
                 submenu: [],
             },
             {
                 text: 'Settings',
                 icon: 'assets/imgs/settings.png',
-                route: '/settings',
+                route: '/authenticated/settings',
                 submenu: [],
             }
         ],
@@ -39,19 +39,19 @@ export const AppMenuItems: MenuItem[] = [
                     {
                         text: 'KOЯN',
                         icon: 'assets/imgs/guitar.png',
-                        route: '/group-detail/korn',
+                        route: '/authenticated/group-detail/korn',
                         submenu: [],
                     },
                     {
                         text: 'Slipknot',
                         icon: 'assets/imgs/guitar.png',
-                        route: '/group-detail/slipknot',
+                        route: '/authenticated/group-detail/slipknot',
                         submenu: [],
                     },
                     {
                         text: 'Linkin Park',
                         icon: 'assets/imgs/guitar.png',
-                        route: '/group-detail/linkin-park',
+                        route: '/authenticated/group-detail/linkin-park',
                         submenu: [],
                     },
                 ]
@@ -59,13 +59,13 @@ export const AppMenuItems: MenuItem[] = [
             {
                 text: 'Top 3',
                 icon: 'assets/imgs/guitar.png',
-                route: '/groups-list/3',
+                route: '/authenticated/groups-list/3',
                 submenu: []
             },
             {
                 text: 'Top 5',
                 icon: 'assets/imgs/guitar.png',
-                route: '/groups-list/5',
+                route: '/authenticated/groups-list/5',
                 submenu: []
             },
         ],

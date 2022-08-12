@@ -1,20 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SpaConfigService } from '../../services/spa-config.service';
+import { UserApi } from '../users/user-api';
 
 @Component({
   selector: 'icon-bar',
   templateUrl: './icon-bar.component.html',
-  styleUrls: ['./icon-bar.component.scss']
+  styleUrls: ['./icon-bar.component.scss'],
 })
 export class IconBarComponent implements OnInit {
   showLoader: boolean;
-  constructor(public spaConfigService: SpaConfigService) { }
+  @Input() showIcons;
+  userInfo: string;
+  constructor(
+    public spaConfigService: SpaConfigService,
+    private userApi: UserApi
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.showLoader = false;
+    this.userInfo = JSON.parse(localStorage.getItem('user'))?.name;
   }
-
   signOut() {
-    console.log('sign out');
+    this.showLoader = true;
+    setTimeout(() => {
+      this.userApi.signOut();
+    }, 2000);
+    console.log('Sign out');
   }
-
 }
